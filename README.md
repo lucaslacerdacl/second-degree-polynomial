@@ -15,7 +15,7 @@
 
 ### Setting up
 
-Execute the `run.secondDegreePolynomial.sh` file to generate the binary files inside `dist` folder and get packages.
+Execute the `run.sh` file to generate the binary files inside `dist` folder and get packages.
 
 For OSX:
 ```shell
