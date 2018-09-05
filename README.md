@@ -19,12 +19,12 @@ Execute the `run.secondDegreePolynomial.sh` file to generate the binary files in
 
 For OSX:
 ```shell
-sh ./run.secondDegreePolynomial.sh
+sh ./run.sh
 ```
 
 For Windows:
 ```shell
-./run.secondDegreePolynomial.sh
+./run.sh
 ```
 
 Execute the `secondDegreePolynomial.sh` file to run the program.
