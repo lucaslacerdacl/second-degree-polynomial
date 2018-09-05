@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Dist
+!src/dist/*.o
+
+# Packages
+packages
