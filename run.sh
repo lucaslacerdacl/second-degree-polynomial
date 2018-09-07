@@ -1,7 +1,7 @@
 set -e
 
 echo "Getting packages"
-
+{
     dependencies=("complex-number;https://github.com/LucasLacerdaCL/complex-number.git")
 
     rm -rf ./packages
@@ -29,7 +29,7 @@ echo "Getting packages"
             fi
             cd ../../
     done
-}
+} &> /dev/null
 
 echo -e "\nGenerating second degree polynomial binary"
 {
