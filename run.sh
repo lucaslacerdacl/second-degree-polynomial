@@ -31,13 +31,6 @@ echo "Getting packages"
     done
 } &> /dev/null
 
-
-echo -e "\nClean Dist folder"
-{
-    rm -rf ./src/dist
-    mkdir ./src/dist
-} &> /dev/null
-
 echo -e "\nGenerating second degree polynomial binary"
 {
     g++ -c ./src/implementations/secondDegreePolynomial.cpp
