@@ -1,7 +1,6 @@
 set -e
 
 echo "Getting packages"
-{
     dependencies=("complex-number;https://github.com/LucasLacerdaCL/complex-number.git")
 
     rm -rf ./packages
@@ -18,13 +17,12 @@ echo "Getting packages"
 
             cd ./packages/"${dependencieName}"
             ./run.sh
-            if [ -f "../../run.sh" ] && [ -d "./packages" ]
-            then
-                cp -r -f ./packages/* ../../packages
-            fi
+            if [ -f "../../run.sh" ] && [ "$(ls -A ./packages)" ]
+                then
+                    cp -r -f ./packages/* ../../packages
+                fi
             cd ../../
     done
-} &> /dev/null
 
 if [ ! -d "./src/dist" ]
 then
