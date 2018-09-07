@@ -1,4 +1,4 @@
-#include "./interfaces/secondDegreePolynomial.h"
+#include "./interfaces/second-degree-polynomial.h"
 
 int main()
 {

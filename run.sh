@@ -1,6 +1,7 @@
 set -e
 
 echo "Getting packages"
+{
     dependencies=("complex-number;https://github.com/LucasLacerdaCL/complex-number.git")
 
     rm -rf ./packages
@@ -23,6 +24,7 @@ echo "Getting packages"
                 fi
             cd ../../
     done
+} &> /dev/null
 
 if [ ! -d "./src/dist" ]
 then
@@ -31,9 +33,9 @@ fi
 
 echo -e "\nGenerating second degree polynomial binary"
 {
-    g++ -c ./src/implementations/secondDegreePolynomial.cpp
-    rm -rf ./src/dist/secondDegreePolynomial.o
-    mv ./secondDegreePolynomial.o ./src/dist/
+    g++ -c ./src/implementations/second-degree-polynomial.cpp
+    rm -rf ./src/dist/second-degree-polynomial.o
+    mv ./second-degree-polynomial.o ./src/dist/
 } &> /dev/null
 
 echo -e "\nGenerating main binary"

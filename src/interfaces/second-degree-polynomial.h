@@ -1,6 +1,8 @@
+#pragma once
+
 #include <iostream>
 #include <cmath>
-#include "../../packages/complex-number/src/interfaces/complex.h"
+#include "../../../complex-number/src/interfaces/complex.h"
 
 class SecondDegreePolynomial
 {
