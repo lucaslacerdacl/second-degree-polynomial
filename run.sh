@@ -13,30 +13,26 @@ echo "Getting packages"
             dependencieURL=(${arrDependencie[1]})
             dependencieName=(${arrDependencie[0]})
 
-            echo "${dependencieName}"
-
             git clone "${dependencieURL}"
             mv ./"${dependencieName}" ./packages/"${dependencieName}"
 
             cd ./packages/"${dependencieName}"
             ./run.sh
-            if [ -f "../../run.sh" ] && [ -f "./packages" ]
+            if [ -f "../../run.sh" ] && [ -d "./packages" ]
             then
-                if [ ! -d "../../packages/${dependencieName}" ]
-                then
-                    mv ./packages/* ../../packages
-                fi
+                cp -r -f ./packages/* ../../packages
             fi
             cd ../../
     done
 } &> /dev/null
 
+if [ ! -d "./src/dist" ]
+then
+    mkdir ./src/dist
+fi
+
 echo -e "\nGenerating second degree polynomial binary"
 {
-    if [ ! -d "./src/dist" ]
-    then
-        mkdir ./src/dist
-    fi
     g++ -c ./src/implementations/secondDegreePolynomial.cpp
     rm -rf ./src/dist/secondDegreePolynomial.o
     mv ./secondDegreePolynomial.o ./src/dist/
@@ -44,10 +40,6 @@ echo -e "\nGenerating second degree polynomial binary"
 
 echo -e "\nGenerating main binary"
 {
-    if [ ! -d "./src/dist" ]
-    then
-        mkdir ./src/dist
-    fi
     g++ -c ./src/main.cpp
     rm -rf ./src/dist/main.o
     mv ./main.o ./src/dist/
