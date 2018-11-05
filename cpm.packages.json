@@ -1,0 +1,11 @@
+{
+  "name": "second-degree-polynomial",
+  "description": "Create a class to solve second degree polynominal",
+  "version": "1.0.0",
+  "dependencies": [
+    {
+      "name": "complex-number",
+      "url": "https://github.com/LucasLacerdaCL/complex-number.git"
+    }
+  ]
+}

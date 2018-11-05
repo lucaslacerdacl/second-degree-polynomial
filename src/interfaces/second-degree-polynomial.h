@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <cmath>
-#include "../../../complex-number/src/interfaces/complex.h"
+#include "../../cpm_modules/complex-number/src/interfaces/complex.h"
 
 class SecondDegreePolynomial
 {

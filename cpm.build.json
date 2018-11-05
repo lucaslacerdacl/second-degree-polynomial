@@ -1,0 +1,8 @@
+{
+  "fileName": "polynominal-calculator",
+  "binaries": [
+    "dist/main.o",
+    "dist/second-degree-polynomial.o",
+    "cpm_modules/complex-number/dist/complex.polar.o"
+  ]
+}
